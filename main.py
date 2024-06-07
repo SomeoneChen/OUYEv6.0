@@ -201,7 +201,7 @@ def start_trading(printf):
     #     printf(f"链接验证服务器失败，请链接网络再试", 'Purple')
     #     stop_thread()
 
-    url = f'https://www.okx.com/cn/copy-trading/trader/{unique_name}/swap/current'
+    url = f'https://www.okx.com/zh-hans/copy-trading/account/{unique_name}'
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     title_tag = soup.find('title')
